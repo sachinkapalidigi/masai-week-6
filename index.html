@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>HRMS</title>
+</head>
+
+<body class="p-5">
+    <div class="container p-3 shadow">
+        <div id="navigation" style="height: 60px" class="row">
+            <div class="col-sm-12">
+                <nav class="nav">
+                    <div class="nav nav-tabs" role="tablist">
+                    <a class="nav-link active"  data-toggle="tab" href="#addEmployeeContainer" role="tab" aria-controls="addEmployeeContainer" aria-selected="true">Add Employee</a>
+                    <a class="nav-link" data-toggle="tab" href="#displayEmployeeContainer" role="tab" aria-controls="displayEmployeeContainer" aria-selected="false">Display Details</a>
+                    <a id="individualDisplay" class="nav-link" data-toggle="tab" href="#employeeProfileContainer" role="tab" aria-controls="employeeProfileContainer" aria-selected="false">Employee Statistics</a>
+                    
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+        <div id="addEmployeeContainer" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-addEmployeeContainer-tab">
+        <h3>Add Employee Details</h3>
+        <form id="createEmployeeForm">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="inputFname" class="form-control" placeholder="First name" required>
+                </div>
+                <div class="col">
+                    <input type="text" id="inputLname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSkillSet">Skill Set</label>
+                <input type="text" class="form-control" id="inputSkillSet" placeholder="Python NodeJs React" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputRole">Current Role</label>
+                    <input type="text" class="form-control" id="inputRole" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputDob">Date Of Birth</label>
+                    <input type="date" class="form-control" id="inputDob" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputDoj">Date of Joining</label>
+                    <input type="date" class="form-control" id="inputDoj" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputDepartment">Department</label>
+                    <select id="inputDepartment" class="form-control" required>
+                        <option value="Marketing" selected>Marketing</option>
+                        <option value="Development">Development</option>
+                        <option value="Testing">Testing</option>
+                        <option value="Human resource">Human Resource</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputTeam">Team</label>
+                    <select id="inputTeam" class="form-control" required>
+                        <option value="Team 1" selected>Team 1</option>
+                        <option value="Team 2">Team 2</option>
+                        <option value="Team 3">Team 3</option>
+                        <option value="Team 7">Team 7</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputManager">Reporting Manager</label>
+                    <input type="text" class="form-control" id="inputManager" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputSalary">Salary</label>
+                    <input type="text" class="form-control" id="inputSalary" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Add Employee</button>
+        </form>
+        </div>
+
+        <div id="displayEmployeeContainer" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-displayEmployeeContainer-tab">
+                <table id="detailsTable" class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Current Role</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Reporting Manager</th>
+                            <th scope="col">Salary</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          
+                        </tbody>
+                      </table>
+        </div>
+        <div id="employeeProfileContainer" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-employeeProfileContainer-tab">
+            abcd
+        </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
