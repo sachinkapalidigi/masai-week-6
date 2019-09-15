@@ -147,9 +147,10 @@ const fillProfile = (index) => {
 
 const changePoints = (index,skill,add) => { 
     let points = employees[index].skillPoints[skill];
+    // let newSkillPoint = employees[index].skillPoints[skill];
     if (add) {
         if (points == undefined) {
-            // employees[index].skillPointsUpdate(skill,2);
+            // employees[index].skillPointsUpdate(skill,2);            
             employees[index].skillPoints[skill] = 2;
         } else if(points == 10) {
             employees[index].skillPoints[skill] = 10;
@@ -172,5 +173,6 @@ const changePoints = (index,skill,add) => {
             // employees[index].skillPointsUpdate(skill,points);
         }
     }
+    updateLocalStorage('employees',employees);    
     fillProfile(index);
 }
